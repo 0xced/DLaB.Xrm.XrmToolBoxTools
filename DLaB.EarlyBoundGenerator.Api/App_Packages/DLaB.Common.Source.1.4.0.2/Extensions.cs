@@ -460,13 +460,13 @@ namespace Source.DLaB.Common
             {
                 s = string.Format("{0} ---> {1}{2}   --- End of inner exception stack trace ---{2}", s, ex.InnerException.ToStringWithCallStack(), Environment.NewLine);
             }
-            
+
             var stackTrace = ex.StackTrace;
             if (stackTrace != null)
             {
                 s += Environment.NewLine + stackTrace;
             }
-            
+
             return s;
         }
 
@@ -491,7 +491,7 @@ namespace Source.DLaB.Common
         #region ICollection
 
         /// <summary>
-        /// Equivalent to !collection.Contains().  Purely for readability, especially if you have a negative collection ie. 
+        /// Equivalent to !collection.Contains().  Purely for readability, especially if you have a negative collection ie.
         /// if(status != null &amp;&amp; !notToCalcStatuses.Contains(status)) vs if(status != null &amp;&amp; notToCalcStatuses.DoesNotContain(status))
         /// </summary>
         /// <typeparam name="T"></typeparam>
@@ -547,7 +547,7 @@ namespace Source.DLaB.Common
         /// <summary>
         /// Allows a Key Selector to be used to create a HashSet and perform a Distinct without creating an Equality Comparer
         /// See http://stackoverflow.com/questions/1300088/distinct-with-lambda
-        /// 
+        ///
         /// </summary>
         /// <typeparam name="TSource"></typeparam>
         /// <typeparam name="TKey"></typeparam>
@@ -740,7 +740,7 @@ namespace Source.DLaB.Common
 
         #region IExtensibleDataObject
 
-#if NETCOREAPP == false
+#if NETFRAMEWORK
         /// <summary>
         /// Serializes the specified obj, returning it's xml serialized value.
         /// </summary>
@@ -1211,7 +1211,7 @@ namespace Source.DLaB.Common
         #endregion SubstringAllByString
 
         /// <summary>
-        /// Inserts spaces before capital letters.  
+        /// Inserts spaces before capital letters.
         /// If more than two capital letters are in sequence, only the first letter will have a space pre appended
         /// examples:
         /// HelloWorld --> Hello World
@@ -1292,7 +1292,7 @@ namespace Source.DLaB.Common
         }
 
             #endregion StringBuilder
-    
+
         #region Type
 
         /// <summary>
